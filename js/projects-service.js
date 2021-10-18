@@ -18,8 +18,8 @@ function _createProjects() {
     var project4 = _createProject('inpicture', 'Inpicture', 'questions & answer game ', 'you need to match flag to country', 'SomeProjects/Ex-in-picture v1.1 solution/index.html', ['Q&A', 'Random Q&A', 'game', 'flags', 'render quest']);
     // project3 & project4 have links to the game save on local folder at SomeProject, this folder would also be uploaded to GitHub
     // SomeProject folder much be inside the project and can not be outside
-
-    gProjects = [project1, project2, project3, project4];
+    var project5 = _createProject('bookshop', 'Book-Shop', 'menageing a book store ', 'you can CRUD at book store', 'https://nirfunt.github.io/book-shop/', ['MCV', 'CRUD', 'Flex Design', 'id injection between functions']);
+    gProjects = [project1, project2, project3, project4,project5];
     // console.log(gProjects);
 
 }

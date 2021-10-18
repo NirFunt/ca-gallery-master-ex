@@ -30,7 +30,8 @@ function renderProjectsPortfolios() {
         return portfolioItemHTML;
     });
     $('.project-portfolios').html(projectsPortfolioHTMLs.join(''));
-    
+    // onclick="renderProjectModal('${proj.id}' should have been done in the rendering as I did, doing it with jQuery could be more tricky
+    // just inject onclick and inject the proj.id in it would be great
 }
 
 function renderProjectModal(id) {
