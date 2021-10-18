@@ -2,26 +2,23 @@
 
 $(document).ready(init);
 function init() {
-
-    renderProjects();
-  
+    renderProjectsPortfolios();
 }
 
 
-function renderProjects() {
-    var i = 0;
+function renderProjectsPortfolios() {
     var projects = getProjects();
     console.log(projects);
     var projectsPortfolioHTMLs = projects.map(proj => {
         var portfolioItemHTML = `
-        <div class="col-md-4 col-sm-6 portfolio-item">
+        <div class="col-md-4 col-sm-6 portfolio-item" onclick="renderProjectModal('${proj.id}')" >
         <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
               <i class="fa fa-plus fa-3x"></i>
             </div>
           </div>
-          <img class="img-fluid" src="img/Projects/${i}.jpg" alt="">
+          <img class="img-fluid" src="img/Projects/${proj.id}.jpg" alt="">
         </a>
         <div class="portfolio-caption">
           <h4>${proj.name}</h4>
@@ -32,8 +29,13 @@ function renderProjects() {
         `
         return portfolioItemHTML;
     });
+    $('.project-portfolios').html(projectsPortfolioHTMLs.join(''));
+}
 
-    var projectsModalHTMLs = projects.map(proj => {
+function renderProjectModal(id) {
+    var proj = getProject(id);
+    console.log(proj);
+
         var portfolioModalHTML = `
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
@@ -50,7 +52,7 @@ function renderProjects() {
                     <!-- Project Details Go Here -->
                     <h2>${proj.name}</h2>
                     <p class="item-intro text-muted">${proj.title}.</p>
-                    <img class="img-fluid d-block mx-auto" src="img/Projects/${i}.jpg" alt="">
+                    <img class="img-fluid d-block mx-auto" src="img/Projects/${proj.id}.jpg" alt="">
                     <p>${proj.desc}</p>
                     <ul class="list-inline">
                       <li>Date: ${proj.publishedAt}</li>
@@ -69,13 +71,6 @@ function renderProjects() {
         </div>
         </div>
         `
-        return portfolioModalHTML;
-    })
-
-
-$('.project-portfolios').html(projectsPortfolioHTMLs.join(''));
-$('.modal-for-projects').html(projectsModalHTMLs.join(''));
-
+    $('.modal-for-projects').html(portfolioModalHTML);
 }
-
 
