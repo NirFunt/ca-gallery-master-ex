@@ -1,0 +1,54 @@
+
+body {
+    text-align: center;
+    background-color: lightcyan;
+    background-image: url("img/sky.jpg") ;
+}
+
+h1 {
+    color: green;
+}
+
+.balloon {
+    width: 50px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    bottom : 100px;
+    padding: 30px;
+    transition: 500ms;
+    opacity: 1;
+}
+
+.balloon1 {
+    background-color: red;
+    margin-left: 500px;
+}
+
+.balloon2 {
+    background-color: lime;
+    margin-left: 200px;
+}
+
+.balloon-fade {
+    display: none;
+}
+
+.balloon-fade2 {
+    opacity : 0;
+}
+
+button {
+    width: 100x;
+    height: 50px;
+    margin: 20px;
+    background-color: red;
+   
+}
+
+button:hover {
+    border-radius: 50%;
+    padding: 20px;
+    text-shadow: 5px 10px 3px green;
+    box-shadow: 5px 10px 3px blue;;
+}

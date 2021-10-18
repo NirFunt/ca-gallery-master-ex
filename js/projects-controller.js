@@ -30,6 +30,7 @@ function renderProjectsPortfolios() {
         return portfolioItemHTML;
     });
     $('.project-portfolios').html(projectsPortfolioHTMLs.join(''));
+    
 }
 
 function renderProjectModal(id) {

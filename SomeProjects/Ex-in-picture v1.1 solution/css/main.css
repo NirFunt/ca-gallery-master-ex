@@ -1,0 +1,67 @@
+body {
+    text-align: center;
+    background-color: lightgray;
+}
+
+.main-div {
+    background-color: red;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    left: 30%;
+    bottom: 300px;
+}
+
+.image-div {
+    width: 300px;
+    height: 200px;
+    margin: auto;
+}
+
+img {
+    width: 250px;
+    margin: auto;
+}
+
+.answers-div {
+    margin-top: 40px;
+    margin: auto;
+}
+
+.answer-div {
+    background-color: seagreen;
+    width: 200px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 25%;
+    border-radius: 20px;
+    animation-name: slidein;
+    animation-duration: 3s;
+}
+
+.answer-div:hover {
+ background-color: blue;
+}
+
+.main-div button {
+    margin: 20px;
+   padding: 30px;
+   display: none;
+}
+
+img:active {
+transform: rotate(0.9turn);
+transition: 1000ms;
+}
+
+
+@keyframes slidein {
+    from {
+      transform: translateX(-400px);
+    }
+  
+    to {
+      transform: translateX(0px);
+    }
+  }
