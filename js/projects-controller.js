@@ -25,7 +25,6 @@ function renderProjectsPortfolios() {
           <p class="text-muted">${proj.id} game</p>
         </div>
       </div>
-        
         `
         return portfolioItemHTML;
     });
@@ -75,4 +74,13 @@ function renderProjectModal(id) {
         `
     $('.modal-for-projects').html(portfolioModalHTML);
 }
+
+function submitForm () {
+    var emailInput = $('.email-input').val();
+    var subjectInput = $('.subject-input').val();
+    var textAreaInput = $('.textarea-input').val();
+    var url = `https://mail.google.com/mail/?view=cm&fs=1&to=${emailInput}&su=${subjectInput}&body=${textAreaInput}`;
+  window.open(url);
+  $('.offcanvas-aside').hide('slow');
+  }
 
