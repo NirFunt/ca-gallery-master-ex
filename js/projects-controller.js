@@ -22,7 +22,7 @@ function renderProjectsPortfolios() {
         </a>
         <div class="portfolio-caption">
           <h4>${proj.name}</h4>
-          <p class="text-muted">Minesweeper Game</p>
+          <p class="text-muted">${proj.id} game</p>
         </div>
       </div>
         
