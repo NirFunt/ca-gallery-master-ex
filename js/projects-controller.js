@@ -81,6 +81,6 @@ function submitForm () {
     var textAreaInput = $('.textarea-input').val();
     var url = `https://mail.google.com/mail/?view=cm&fs=1&to=${emailInput}&su=${subjectInput}&body=${textAreaInput}`;
   window.open(url);
-  $('.offcanvas-aside').hide('slow');
+  $('.offcanvas-aside').removeClass('offcanvas-aside-open');
   }
 
