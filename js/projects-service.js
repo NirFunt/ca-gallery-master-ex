@@ -2,13 +2,19 @@
 
 var gProjects;
 
+_createProjects();
+
 function getProjects() {
     return gProjects;
 }
 
 
 function _createProjects() {
-    var prject = _createProject('minesweeper', 'Minesweeper', 'upgraded Minesweeper game', 'there is a board with hidden mines, you supposed to uncover the board without clicking on hidden mines', '../AllProjects/MineSweeper', ['matrix', 'document flow styiling', 'game', 'neighbours']);
+    gProjects = [];
+    var project = _createProject('minesweeper', 'Minesweeper', 'upgraded Minesweeper game', 'there is a board with hidden mines, you supposed to uncover the board without clicking on hidden mines', 'https://nirfunt.github.io/MineSweeper2/', ['matrix', 'document flow styiling', 'game', 'neighbours']);
+    console.log(project);
+    gProjects.push(project);
+
 }
 
 
